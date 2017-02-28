@@ -1,0 +1,57 @@
+.service {
+    @include col(24, 24, 8, 8);
+    display: flex;
+    padding-right: 0;
+    padding-left: 30px;
+    overflow: hidden;
+
+    &__title{
+        font-weight: 700;
+        font-size: 22px;
+        color: $red;
+        position: relative;
+        padding-bottom: 35px;
+
+        &:after {
+            content: '';
+            height: 1px;
+            width: 30px;
+            background-color: $black;
+            display: inline-block;
+            position: absolute;
+            bottom: 18px;
+            left: 0;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 20px;
+        line-height: 1.1;
+    }
+
+    &__img {
+        align-self: flex-end;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__info {
+        padding-top: 35px;
+    }
+
+    &__readmore {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: $tablet-width-point) {
+    .service {
+        align-items: center;
+
+        &__info {
+            padding-top: 0;
+        }
+    }
+}

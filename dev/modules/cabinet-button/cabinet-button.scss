@@ -1,0 +1,79 @@
+.cabinet-button {
+    background-color: $gray-light;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: $red;
+
+        .cabinet-button__logo {
+            background-image: url('./tray-hover.png');
+        }
+
+        .cabinet-button__text {
+            color: $white;
+        }
+    }
+
+    &__logo {
+        height: 25px;
+        width: 40px;
+        background-image: url('./tray.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        transition: 0.2s;
+
+        &_hover {
+            background-image: url('./tray-hover.png');
+            display: none;
+        }
+    }
+
+    &__text {
+        font-size: 17px;
+        text-transform: uppercase;
+        color: $black;
+        transition: 0.2s;
+    }
+}
+
+@media (max-width: $tablet-width-point) {
+    .cabinet-button {
+        &__logo {
+            height: 25px;
+            width: 50px;
+            background-position: center center;
+            background-size: contain;
+        }
+
+        &__text {
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .cabinet-button {
+        display: block;
+        text-align: center;
+        padding: 15px;
+
+        &__logo {
+            display: inline-block;
+            vertical-align: middle;
+            height: 23px;
+            margin-right: 10px;
+        }
+
+        &__text {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 22px;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.two-column-block {
+    &__inner {
+        padding: 35px 20px;
+    }
+
+    &__row {
+        @include row;
+    }
+
+    &__column {
+        @include col(24, 24, 12, 12);
+    }
+
+    &__title {
+        color: $red;
+        font-weight: 700;
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+
+    &__content {
+        font-weight: 300;
+        line-height: 1.3;
+        font-size: 16px;
+    }
+
+    p {
+        padding-bottom: 20px;
+    }
+
+    &__readmore {
+        color: $red;
+        text-decoration: none;
+        transition: 0.2s;
+        @include link-decoration-inverse($red, 1px, -1px, 0.2s);
+    }
+
+    &__info {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .two-column-block {
+        &__inner {
+            padding: 35px 5px;
+        }
+
+        &__info {
+            padding: 20px 0;
+        }
+    }
+}

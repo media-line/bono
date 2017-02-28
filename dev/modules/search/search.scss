@@ -1,0 +1,48 @@
+.search {
+    &__input {
+        width: 100%;
+        border: 1px solid $gray;
+        height: 35px;
+        font-size: 16px;
+        font-weight: 300;
+        padding: 0 35px 0 20px;
+        outline: none;
+        border-radius: 2px;
+        transition: 0.2s;
+        box-sizing: border-box;
+        background-color: $gray-light;
+
+        &:focus {
+            border: 1px solid $red;
+        }
+    }
+
+    &__form {
+        width: 100%;
+        position: relative;
+    }
+
+    &__button {
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        height: 35px;
+        width: 35px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &:after {
+            @include icomoon;
+            content: "\e900";
+            font-size: 16px;
+            transition: 0.2s;
+        }
+
+        &:hover:after {
+            color: $red;
+        }
+    }
+}

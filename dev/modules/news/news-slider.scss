@@ -1,0 +1,11 @@
+.news-slider {
+    @include container;
+
+    &__row {
+        @include row;
+    }
+
+    &__single-news {
+        outline: none;
+    }
+}

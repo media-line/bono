@@ -1,0 +1,24 @@
+.mainpage-grid {
+    @include container;
+    background-color: $white;
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+
+    &__services {
+        border-bottom: 1px solid $gray;
+        padding: 0 15px;
+        margin: 0 -15px;
+    }
+
+    &__two-column-block {
+        border-bottom: 1px solid $gray;
+        padding: 0 15px;
+        margin: 0 -15px;
+    }
+
+    &__news-slider {
+        padding: 0 15px;
+        margin: 0 -15px;
+    }
+}

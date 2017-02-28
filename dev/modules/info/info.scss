@@ -1,0 +1,50 @@
+.info {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        padding-bottom: 10px;
+    }
+
+    &__text {
+        font-weight: 300;
+    }
+
+    &__content {
+        /*display: inline-block;
+        vertical-align: middle;
+        width: 83%;
+        margin-left: 3%;*/
+    }
+
+    &__img {
+        height: 70px;
+        min-width: 70px;
+        margin-right: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+
+        &_cook {
+            background-image: url('./cook-hat.png');
+        }
+
+        &_tray {
+            background-image: url('./tray-big.png');
+        }
+
+        &_waiter {
+            background-image: url('./waiter.png');
+        }
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .info {
+        &__img {
+            height: 50px;
+            min-width: 50px;
+        }
+    }
+}
