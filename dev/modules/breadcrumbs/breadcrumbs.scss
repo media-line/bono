@@ -1,0 +1,21 @@
+.breadcrumbs {
+    text-align: center;
+    font-weight: 300;
+
+    &__link {
+        color: $black-light;
+        text-decoration: none;
+        @include link-decoration-inverse ($black-light, 1px, 0px, 0.2s);
+        margin-right: 23px;
+        position: relative;
+
+        &:before {
+            @include icomoon;
+            content: "\e901";
+            position: absolute;
+            right: -20px;
+            font-size: 13px;
+            top: 5px;
+        }
+    }
+}

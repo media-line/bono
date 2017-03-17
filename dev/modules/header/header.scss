@@ -1,5 +1,8 @@
 .header {
     background-color: $white;
+    box-shadow: 0 2px 3px $gray-dark;
+    position: relative;
+    z-index: 1;
 
     &__wrapper {
         @include container;
@@ -25,7 +28,7 @@
         padding-left: 0;
     }
 
-    &__search {
+    &__search-wrapper {
         @include col(14, 9, 9, 11);
     }
 
@@ -42,7 +45,7 @@
         text-align: right;
     }
 
-    &__top-menu {
+    &__top-menu-block {
         @include col(24, 20, 19, 20);
         padding-left: 0;
     }

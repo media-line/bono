@@ -2,4 +2,4 @@
 
 import './service.scss';
 
-import './../readmore/readmore.js';
+import './../button/button.js';

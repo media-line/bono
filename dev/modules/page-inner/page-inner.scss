@@ -1,0 +1,66 @@
+.page-inner {
+    background-color: $gray-light;
+    background-image: url('./background-wood.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    line-height: 1.1;
+
+    &__title {
+        text-align: center;
+        font-size: 60px;
+        font-weight: 700;
+        color: $red;
+        padding-bottom: 40px;
+    }
+
+    &__breadcrumbs-block {
+        padding: 30px 0 20px 0;
+    }
+
+    &__content {
+        @include container;
+        background-color: $white;
+        padding: 40px 45px;
+        border: 1px solid $gray;
+    }
+
+    &__module {
+        @include container;
+        background-color: $white;
+        border: 1px solid $gray;
+        margin-top: 45px;
+    }
+}
+
+@media (max-width: $small-device-width-point) {
+    .page-inner {
+        &__content {
+            padding: 40px 35px;
+        }
+    }
+}
+
+@media (max-width: $tablet-width-point) {
+    .page-inner {
+        &__title {
+            font-size: 48px;
+        }
+
+        &__content {
+            padding: 40px 35px;
+        }
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .page-inner {
+        &__title {
+            font-size: 38px;
+            padding-bottom: 30px;
+        }
+
+        &__content {
+            padding: 40px 20px;
+        }
+    }
+}

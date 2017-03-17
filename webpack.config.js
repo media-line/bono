@@ -7,11 +7,22 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
+        search: __dirname + '/dev/components/search/search',
+        topMenu: __dirname + '/dev/components/top-menu/top-menu',
+        slider: __dirname + '/dev/components/slider/slider',
+        services: __dirname + '/dev/components/services/services',
+        newsSlider: __dirname + '/dev/components/news-slider/news-slider',
+        serviceDetail: __dirname + '/dev/components/service-detail/service-detail',
+        listProducts: __dirname + '/dev/components/list-products/list-products',
+        
         mainpage: __dirname + '/dev/mainpage',
+        delivery: __dirname + '/dev/delivery',
+        catering: __dirname + '/dev/catering',
+        leaseCategory: __dirname + '/dev/lease-category',
     }, 
     output: {
         path: __dirname + '/public',
-        publicPath: '/',
+        publicPath: NODE_ENV == 'development' ? '/' : '',
         filename: 'js/[name].js'
     },
     
@@ -37,7 +48,7 @@ module.exports = {
                         {
                             loader: 'css-loader',
                             options: {
-                                minimize: true
+                                //minimize: true
                             }
                         }, 
                         "postcss-loader", 
@@ -78,17 +89,17 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'common',
-            //minChunks: 3,
+            minChunks: 2,
         }),
-        new webpack.optimize.UglifyJsPlugin({
+        /*new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
             },
             output: {
                 comments: false,
             },
-            sourceMap: true
-        }),
+            sourceMap: true,
+        }),*/
         new ExtractTextPlugin({filename: "css/[name].css", allChunks: true, disable: NODE_ENV == 'development'}),
         new webpack.ProvidePlugin({
             $: "jquery",

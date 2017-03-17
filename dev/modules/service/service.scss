@@ -4,6 +4,7 @@
     padding-right: 0;
     padding-left: 30px;
     overflow: hidden;
+    justify-content: space-between;
 
     &__title{
         font-weight: 700;
@@ -11,6 +12,7 @@
         color: $red;
         position: relative;
         padding-bottom: 35px;
+        width: 100%;
 
         &:after {
             content: '';
@@ -29,20 +31,26 @@
         font-weight: 300;
         padding-bottom: 20px;
         line-height: 1.1;
+        width: 100%;
     }
 
     &__img {
         align-self: flex-end;
         display: flex;
         align-items: flex-end;
+        min-width: 45%;
+        justify-content: flex-end;
     }
 
     &__info {
         padding-top: 35px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    &__readmore {
+    &__button {
         margin-bottom: 30px;
+        align-self: flex-end;
     }
 }
 
@@ -52,6 +60,24 @@
 
         &__info {
             padding-top: 0;
+        }
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .service {
+        &__img {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: $small-mobile-width-point) {
+    .service {
+        &__title {
+            font-size: 18px;
         }
     }
 }

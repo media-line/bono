@@ -5,6 +5,7 @@
     padding-right: 15px;
     padding-left: 15px;
     max-width: 100%;
+    box-sizing: border-box;
 
     @media (min-width: $mobile-width-point-min) {
         width: $tablet-width;
@@ -32,6 +33,16 @@
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
+}
+
+@mixin clearfix {
+    &:after {
+        content: " ";
+        visibility: hidden;
+        display: block;
+        height: 0;
+        clear: both;
+    }
 }
 
 @mixin no-gutters {

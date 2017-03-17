@@ -5,7 +5,7 @@
     border-right: 1px solid $gray;
     border-bottom: 1px solid $gray;
 
-    &__services {
+    &__services-block {
         border-bottom: 1px solid $gray;
         padding: 0 15px;
         margin: 0 -15px;
@@ -20,5 +20,49 @@
     &__news-slider {
         padding: 0 15px;
         margin: 0 -15px;
+    }
+
+    &__inner {
+        padding: 35px 20px;
+    }
+
+    &__title {
+        color: $red;
+        font-weight: 700;
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+
+    &__content {
+        font-weight: 300;
+        line-height: 1.3;
+        font-size: 16px;
+    }
+
+    p {
+        padding-bottom: 20px;
+    }
+
+    &__readmore {
+        color: $red;
+        text-decoration: none;
+        transition: 0.2s;
+        @include link-decoration-inverse($red, 1px, -1px, 0.2s);
+    }
+
+    &__info {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .mainpage-grid {
+        &__inner {
+            padding: 35px 5px;
+        }
+
+        &__info {
+            padding: 20px 0;
+        }
     }
 }

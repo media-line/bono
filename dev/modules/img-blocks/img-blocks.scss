@@ -1,0 +1,7 @@
+.img-blocks {
+    @include row;
+
+    &__img-block {
+        @include col(12, 12, 6, 6);
+    }
+}

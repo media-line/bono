@@ -1,0 +1,15 @@
+.two-column-grid {
+    @include row;
+
+    &__column {
+        @include col(24, 24, 12, 12);
+    }
+}
+
+@media (max-width: $tablet-width-point) {
+    .two-column-grid {
+        &__column {
+            padding-bottom: 35px;
+        }
+    }
+}

@@ -2,6 +2,5 @@
 
 import './mainpage-grid.scss';
 
-import './../services/services';
-import './../two-column-block/two-column-block';
-import './../news-slider/news-slider';
+import './../two-column-grid/two-column-grid';
+import './../info/info.js';

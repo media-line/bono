@@ -1,0 +1,29 @@
+.product {
+    padding: 25px;
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 180px;
+        margin-bottom: 20px;
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    &__title {
+        font-weight: 400;
+        height: 45px;
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .product {
+        &__title {
+            font-weight: 400;
+            height: 65px;
+        }
+    }
+}

@@ -1,10 +1,9 @@
 "use strict";
 
-import './style.scss';
+import './sass/common.scss';
 import './index.html';
 
 import './modules/header/header';
-import './modules/slider/slider';
 import './modules/mainpage-grid/mainpage-grid';
 import './modules/footer/footer';
 

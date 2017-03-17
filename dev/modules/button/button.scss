@@ -1,0 +1,25 @@
+.button {
+    display: inline-block;
+    border: 1px solid $red;
+    color: $red;
+    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+    font-weight: 400;
+
+    &:hover {
+        color: $white;
+        background-color: $red;
+    }
+
+    &_red {
+        color: $white;
+        background-color: $red;
+
+        &:hover {
+            color: $red;
+            background-color: $white;
+        }
+    }
+}
