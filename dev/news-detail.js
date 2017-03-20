@@ -1,7 +1,7 @@
 "use strict";
 
 import './sass/common.scss';
-import './cafe-service.html';
+import './news-detail.html';
 
 import './modules/header/header';
 import './modules/page-inner/page-inner';

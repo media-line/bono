@@ -95,6 +95,15 @@
     }
 }
 
+@media (max-width: $tablet-width-point) {
+    .news-slider {
+        &__arrows {
+            top: -60px;
+        }
+    }
+}
+
+
 @media (max-width: $mobile-width-point) {
     .news-slider {
         &__title {

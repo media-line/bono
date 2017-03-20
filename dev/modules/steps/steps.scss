@@ -1,0 +1,9 @@
+.steps {
+    counter-reset: steps;
+
+    &__step {
+        & + .steps__step {
+            padding-top: 35px;
+        }
+    }
+}

@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="/js/common.js"></script>
-    <script src="/js/leaseCategory.js"></script>
+    <script src="/js/cafeService.js"></script>
     <script src="/js/topMenu.js"></script>
     <script src="/js/search.js"></script>
     <script src="/js/services.js"></script>
-    <script src="/js/listProducts.js"></script>
+    <script src="/js/serviceDetail.js"></script>
 </head>
 <body>
     <header class="header">
@@ -86,137 +86,179 @@
         </div>
 
         <div class="page-inner__title">
-            Ресторанное оборудование
+            Доставка обедов
         </div>
 
         <div class="page-inner__content">
-            <div class="list-products">
-                <div class="list-products__product">
-                    <div class="product">
-                        <div class="product__img">
-                            <img src="/images/boiler.jpg" alt="">
-                        </div>
+            <div class="service-detail">
+                <div class="service-detail__img">
+                    <img src="/images/canteen.jpg" alt="">
+                </div>
 
-                        <div class="product__title">
-                            Мармит подогреваемый, 7 л
-                        </div>
+                <div class="service-detail__menu-block">
+                    <div class="menu-block">
+                        <div class="menu-block__row">
+                            <div class="menu-block__steps">
+                                <div class="menu-block__title">
+                                    Базовый сценарий сотрудничества, в части обслуживания столовой, выглядит следующим образом:
+                                </div>
 
-                        <div class="product__desc">
-                            цена 220 000 руб./сутки
+                                <div class="steps">
+                                    <div class="two-column-grid">
+                                        <div class="two-column-grid__column">
+                                            <div class="step steps__step">
+                                                <div class="step__img">
+                                                    <img src="/images/meet.png" alt="">
+                                                </div>
+                                                <div class="step__text">
+                                                    Проводится рабочая встреча, в рамках которой заказчик формулирует свои пожелания в отношении возможного сотрудничества, обсуждаются возможные нюансы и производится осмотр помещения столовой, оценивается её санитарное состояние и пригодность имеющегося оборудования.
+                                                </div>
+                                            </div>
+
+                                            <div class="step steps__step">
+                                                <div class="step__img">
+                                                    <img src="/images/contract.png" alt="">
+                                                </div>
+                                                <div class="step__text">
+                                                    После достижения согласия в части размера арендной платы, заключается договор аренды помещения столовой либо кафе и имеющегося оборудования.
+                                                </div>
+                                            </div>
+
+                                            <div class="step steps__step">
+                                                <div class="step__img">
+                                                    <img src="/images/personal.png" alt="">
+                                                </div>
+                                                <div class="step__text">
+                                                    Мы формируем собственный штат поваров и обслуживающего персонала.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="two-column-grid__column">
+                                            <div class="step steps__step">
+                                                <div class="step__img">
+                                                    <img src="/images/permits.png" alt="">
+                                                </div>
+                                                <div class="step__text">
+                                                    Мы получаем разрешительные документы.
+                                                </div>
+                                            </div>
+
+                                            <div class="step steps__step">
+                                                <div class="step__img">
+                                                    <img src="/images/organization.png" alt="">
+                                                </div>
+                                                <div class="step__text">
+                                                    Мы организуем производство и процесс обслуживания столовой.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="list-products__product">
-                    <div class="product">
-                        <div class="product__img">
-                            <img src="/images/termobox.jpg" alt="">
+                <div class="service-detail__content">
+                    <div class="two-column-grid">
+                        <div class="two-column-grid__column">
+                            Для обеспечения высокого качества кейтеринговых услуг компания «Bono» ежегодно инвестирует существенные средства в модернизацию материально-технической базы, задействованной в организации кейтеринговых мероприятий, и обучение поваров, официантов и менеджеров, курирующих данное направление работы. Для того чтоб не переставать удивлять клиентов качеством, презентабельностью и разнообразием блюд повара и технологи компании «Bono» непрерывно работают над совершенствованием и расширением кейтерингового меню. Поэтому предлагая клиентам свои услуги, мы с уверенностью говорим, что мы предлагаем услуги профессионалов.
                         </div>
 
-                        <div class="product__title">
-                            Термобокс для транспортировки горячей еды
-                        </div>
-
-                        <div class="product__desc">
-                            цена 220 000 руб./сутки
+                        <div class="two-column-grid__column">
+                            Большой популярностью, так же, пользуется услуга доставки канапе. Это прекрасный способ быстро и эффектно накрыть стол в честь небольшого личного или корпоративного торжества, не требующего обслуживания официантом.
                         </div>
                     </div>
                 </div>
 
-                <div class="list-products__product">
-                    <div class="product">
-                        <div class="product__img">
-                            <img src="/images/boiler1.jpg" alt="">
-                        </div>
-
-                        <div class="product__title">
-                            Бойлер для чая/кофе, 6 л (около 30 чашек)
-                        </div>
-
-                        <div class="product__desc">
-                            цена 220 000 руб./сутки
-                        </div>
-                    </div>
+                <div class="service-detail__title service-detail__title_padding">
+                    Наши реализованные проекты по обслуживанию столовых и кафе:
                 </div>
 
-                <div class="list-products__product">
-                    <div class="product">
-                        <div class="product__img">
-                            <img src="/images/cup.jpg" alt="">
+                <div class="img-blocks img-blocks_slider">
+                    <a href="/" class="img-block img-blocks__img-block">
+                        <div class="img-block__cover">
+                            <div class="img-block__img" style="background-image: url('/images/cafe1.jpg');">
+
+                            </div>
+
+                            <div class="img-block__hover"></div>
                         </div>
 
-                        <div class="product__title">
-                            Термобокс для транспортировки горячей еды
+                        <div class="img-block__text">
+                            Кафе Гостиница
+                        </div>
+                    </a>
+
+                    <a href="/" class="img-block img-blocks__img-block">
+                        <div class="img-block__cover">
+                            <div class="img-block__img" style="background-image: url('/images/cafe2.jpg');">
+
+                            </div>
+
+                            <div class="img-block__hover"></div>
                         </div>
 
-                        <div class="product__desc">
-                            цена 220 000 руб./сутки
+                        <div class="img-block__text">
+                            Ресторан Гвоздика
                         </div>
-                    </div>
-                </div>
+                    </a>
 
-                <div class="list-products__product">
-                    <div class="product">
-                        <div class="product__img">
-                            <img src="/images/glass.jpg" alt="">
-                        </div>
+                    <a href="/" class="img-block img-blocks__img-block">
+                        <div class="img-block__cover">
+                            <div class="img-block__img" style="background-image: url('/images/cafe3.jpg');">
 
-                        <div class="product__title">
-                            Бойлер для чая/кофе, 6 л (около 30 чашек)
+                            </div>
+
+                            <div class="img-block__hover"></div>
                         </div>
 
-                        <div class="product__desc">
-                            цена 220 000 руб./сутки
+                        <div class="img-block__text">
+                            Ресторан У Нивы
                         </div>
-                    </div>
-                </div>
+                    </a>
 
-                <div class="list-products__product">
-                    <div class="product">
-                        <div class="product__img">
-                            <img src="/images/plate.jpg" alt="">
-                        </div>
+                    <a href="/" class="img-block img-blocks__img-block">
+                        <div class="img-block__cover">
+                            <div class="img-block__img" style="background-image: url('/images/cafe4.jpg');">
 
-                        <div class="product__title">
-                            Термобокс для транспортировки горячей еды
+                            </div>
+
+                            <div class="img-block__hover"></div>
                         </div>
 
-                        <div class="product__desc">
-                            цена 220 000 руб./сутки
+                        <div class="img-block__text">
+                            Кафе Моя дорогая
                         </div>
-                    </div>
-                </div>
+                    </a>
 
-                <div class="list-products__product">
-                    <div class="product">
-                        <div class="product__img">
-                            <img src="/images/cup1.jpg" alt="">
-                        </div>
+                    <a href="/" class="img-block img-blocks__img-block">
+                        <div class="img-block__cover">
+                            <div class="img-block__img" style="background-image: url('/images/cafe1.jpg');">
 
-                        <div class="product__title">
-                            Мармит подогреваемый, 7 л
+                            </div>
+
+                            <div class="img-block__hover"></div>
                         </div>
 
-                        <div class="product__desc">
-                            цена 220 000 руб./сутки
+                        <div class="img-block__text">
+                            Кафе Гостиница
                         </div>
-                    </div>
-                </div>
+                    </a>
 
-                <div class="list-products__product">
-                    <div class="product">
-                        <div class="product__img">
-                            <img src="/images/cup2.jpg" alt="">
-                        </div>
+                    <a href="/" class="img-block img-blocks__img-block">
+                        <div class="img-block__cover">
+                            <div class="img-block__img" style="background-image: url('/images/cafe2.jpg');">
 
-                        <div class="product__title">
-                            Мармит подогреваемый, 7 л
+                            </div>
+
+                            <div class="img-block__hover"></div>
                         </div>
 
-                        <div class="product__desc">
-                            цена 220 000 руб./сутки
+                        <div class="img-block__text">
+                            Ресторан Гвоздика
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

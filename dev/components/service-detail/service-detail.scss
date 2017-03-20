@@ -66,9 +66,20 @@
 @media (max-width: $tablet-width-point) {
     .service-detail {
         &__title {
+            padding-right: 100px;
+            font-size: 22px;
+
             &_padding {
                 padding-top: 0px;
             }
+        }
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .service-detail {
+        &__title {
+            font-size: 18px;
         }
     }
 }

@@ -21,6 +21,10 @@
         @include col(24, 14, 18, 18);
     }
 
+    &__steps {
+        @include col(24, 24, 24, 24);
+    }
+
     &__title {
         color: $red;
         font-size: 24px;

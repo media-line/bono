@@ -30,6 +30,104 @@
         border: 1px solid $gray;
         margin-top: 45px;
     }
+
+    img {
+        margin-right: 20px;
+        border: 1px solid $gray;
+    }
+
+    p {
+        padding-bottom: 25px;
+    }
+
+    ol {
+        color: $red;
+        font-weight: 700;
+        counter-reset: first;
+        font-size: 18px;
+        padding-bottom: 25px;
+
+        li {
+            color: $black;
+            font-weight: 300;
+            font-size: 16px;
+            margin-top: 5px;
+
+            &:before {
+                counter-increment: first;
+                content: counters(first,".") ". ";
+                color: $red;
+                font-weight: 700;
+            }
+        }
+
+        ol {
+            padding-left: 18px;
+            padding-bottom: 0;
+        }
+    }
+
+    ul {
+        color: $red;
+        font-weight: 700;
+        counter-reset: first;
+        font-size: 18px;
+        padding-bottom: 25px;
+
+        li {
+            color: $black;
+            font-weight: 300;
+            font-size: 16px;
+            margin-top: 5px;
+
+            &:before {
+                width: 4px;
+                height: 4px;
+                border-radius: 100%;
+                background-color: $red;
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 5px;
+                position: relative;
+                top: -1px;
+            }
+        }
+
+        ul {
+            padding-bottom: 0;
+        }
+    }
+
+    table {
+        margin-bottom: 25px;
+
+        thead {
+            text-align: center;
+
+            td {
+                padding: 20px 30px;
+                font-weight: 400;
+            }
+        }
+
+        td {
+            padding: 10px 30px;
+            border-top: 1px solid $gray;
+
+            & + td {
+                border-left: 1px solid $gray;
+            }
+        }
+
+        tbody {
+            tr:last-child {
+                td {
+                    border-bottom: 1px solid $gray;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: $small-device-width-point) {
