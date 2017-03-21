@@ -1,5 +1,14 @@
 .service-detail {
     text-align: justify;
+    line-height: 1.2;
+
+    ul {
+        padding-bottom: 15px;
+
+        li {
+            margin-top: 0;
+        }
+    }
 
     &__img {
         padding-bottom: 40px;

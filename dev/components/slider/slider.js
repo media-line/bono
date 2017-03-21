@@ -3,8 +3,10 @@
 import './slider.scss';
 import slick from 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
+import {promiseHeaderHeight} from './../../modules/header/header';
 
 const $slider = '.slider';
+const $slide = '.slider__slide';
 const $dots = '.slider__dots';
 const $dot = '.slider__dot';
 const dotActive = 'slider__dot_active';
@@ -35,5 +37,25 @@ $(document).ready(function () {
 
     $($slider).on('beforeChange', function(event, slick, currentSlide, nextSlide){
         setActiveDot (nextSlide);
+    });
+});
+
+$(window).on('load', function () {
+    promiseHeaderHeight.then(
+        result => {
+            $($slide).height($(window).outerHeight() - result);
+            $($dots).height($(window).outerHeight() - result);
+            $($slider).slick('reinit');
+        }
+    );
+
+    $(window).resize(function () {
+        promiseHeaderHeight.then(
+            result => {
+                $($slide).height($(window).outerHeight() - result);
+                $($dots).height($(window).outerHeight() - result);
+                $($slider).slick('reinit');
+            }
+        );
     });
 });

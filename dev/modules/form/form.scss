@@ -1,0 +1,17 @@
+.form {
+    &__title {
+        padding-bottom: 15px;
+    }
+
+    &__important {
+        color: $red;
+    }
+
+    &__field {
+        padding-bottom: 30px;
+    }
+
+    .two-column-grid__column {
+        padding-bottom: 0;
+    }
+}

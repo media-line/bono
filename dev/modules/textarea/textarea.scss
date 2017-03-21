@@ -1,0 +1,19 @@
+.textarea {
+    border-radius: 2px;
+    border: 1px solid $black-light;
+    height: 105px;
+    background-color: $gray-light2;
+    width: 100%;
+    transition: 0.2s;
+    outline: none;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    resize: none;
+    letter-spacing: 0;
+    font-family: 'Roboto Condensed';
+
+    &:focus {
+        border: 1px solid $red;
+    }
+}

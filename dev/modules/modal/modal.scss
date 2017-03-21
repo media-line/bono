@@ -1,0 +1,106 @@
+body.modal__open {
+    overflow: hidden;
+}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &_open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $black;
+        opacity: 0.3;
+        z-index: 1000;
+    }
+
+    &__block {
+        z-index: 1010;
+        position: relative;
+        background-color: $white;
+        margin: 30px 0;
+
+        &_wide {
+            width: 700px;
+        }
+    }
+
+    &__close {
+        width: 65px;
+        display: flex;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0;
+        transition: 0.2s;
+        cursor: pointer;
+        background-color: $red-dark;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+
+        &:after {
+            height: 18px;
+            width: 18px;
+            content: '';
+            background-image: url('./cross.svg');
+            background-size: contain;
+            display: inline-block;
+            position: relative;
+            z-index: 10000;
+        }
+
+        &:hover {
+            background-color: $red;
+        }
+    }
+
+    &__header {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 15px 0 15px 25px;
+        background-color: $red;
+        color: $white;
+        padding-right: 80px;
+        position: relative;
+    }
+
+    &__body {
+        background-color: white;
+        padding: 25px;
+    }
+}
+
+@media (max-width: $mobile-width-point) {
+    .modal {
+        &__block {
+            &_wide {
+                width: 85%;
+            }
+        }
+    }
+}

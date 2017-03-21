@@ -1,0 +1,22 @@
+.select {
+    border-radius: 2px;
+    border: 1px solid $black-light;
+    height: 35px;
+    background-color: $gray-light2;
+    width: 100%;
+    transition: 0.2s;
+    outline: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    appearance: none;
+    background-image: url('./arrow-bottom.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    font-family: 'Roboto Condensed';
+
+    &:focus {
+        border: 1px solid $red;
+        background-image: url('./arrow-bottom-red.png');
+    }
+}

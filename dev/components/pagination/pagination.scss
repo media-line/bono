@@ -1,0 +1,41 @@
+.pagination {
+    text-align: center;
+    padding: 20px 0;
+
+    &__item {
+        display: inline-block;
+        padding: 0 5px;
+    }
+
+    &__link {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $black-light;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 20px;
+        color: $black-light;
+        transition: 0.2s;
+
+        &:hover {
+            background-color: $red;
+            color: $white;
+            border: 1px solid $red;
+        }
+
+        &_current {
+            background-color: $white;
+            color: $red;
+            border: 1px solid $red;
+            
+            &:hover {
+                background-color: $white;
+                color: $red;
+                border: 1px solid $red;
+            }
+        }
+    }
+}

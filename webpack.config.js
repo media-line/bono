@@ -18,6 +18,9 @@ module.exports = {
         listNews: __dirname + '/dev/components/list-news/list-news',
         detailNews: __dirname + '/dev/components/detail-news/detail-news',
         listPortfolio: __dirname + '/dev/components/list-portfolio/list-portfolio',
+        pagination: __dirname + '/dev/components/pagination/pagination',
+        detailContact: __dirname + '/dev/components/detail-contact/detail-contact',
+        listPersonal: __dirname + '/dev/list-personal',
         
         mainpage: __dirname + '/dev/mainpage',
         delivery: __dirname + '/dev/delivery',
@@ -29,6 +32,9 @@ module.exports = {
         newsDetail: __dirname + '/dev/news-detail',
         portfolio: __dirname + '/dev/portfolio',
         text: __dirname + '/dev/text',
+        lease: __dirname + '/dev/lease',
+        contactsPage: __dirname + '/dev/contacts-page',
+        personalList: __dirname + '/dev/personal-list',
     }, 
     output: {
         path: __dirname + '/public',
