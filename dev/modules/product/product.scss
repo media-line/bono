@@ -11,12 +11,30 @@
         img {
             max-height: 100%;
             max-width: 100%;
+            border: none;
+            margin-right: 0;
         }
     }
 
     &__title {
         font-weight: 400;
         height: 45px;
+    }
+}
+
+@media (max-width: $small-device-width-point) {
+    .product {
+        &__title {
+            height: 60px;
+        }
+    }
+}
+
+@media (max-width: $tablet-width-point) {
+    .product {
+        &__title {
+            height: 45px;
+        }
     }
 }
 

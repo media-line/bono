@@ -9,6 +9,8 @@
             max-width: 70%;
             position: relative;
             top: -2px;
+            border: none;
+            margin-right: 0;
         }
     }
 
@@ -20,6 +22,7 @@
 
     &__text {
         text-align: justify;
+        padding-bottom: 0 !important;
     }
 
     b {

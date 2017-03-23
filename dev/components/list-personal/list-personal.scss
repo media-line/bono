@@ -1,3 +1,42 @@
 .list-personal {
-    
+    &__row {
+        @include row;
+        padding-bottom: 30px;
+        margin: 0;
+
+        & + .list-personal__row {
+            padding-top: 30px;
+            border-top: 1px solid $gray;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    &__personal-item {
+        @include col(24, 24, 12, 12);
+
+        &:nth-child(odd) {
+            padding-left: 0;
+        }
+
+        &:nth-child(even) {
+            padding-right: 0;
+        }
+    }
+}
+
+@media (max-width: $tablet-width-point) {
+    .list-personal {
+        &__row {
+            padding-top: 0 !important;
+            padding-bottom: 0;
+            border-top: none !important;
+        }
+
+        &__personal-item {
+            padding: 15px 0;
+        }
+    }
 }

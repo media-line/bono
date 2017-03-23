@@ -1,12 +1,15 @@
 .contact {
+    display: flex;
+    align-items: center;
+
     &__logo {
         height: 35px;
         width: 40px;
+        min-width: 40px;
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
-        display: inline-block;
-        vertical-align: middle;
+        margin-right: 5px;
 
         &_phone {
             background-image: url('./phone.png');
@@ -30,8 +33,6 @@
     &__content {
         font-weight: 500;
         font-size: 22px;
-        display: inline-block;
-        vertical-align: middle;
     }
 
     a {
@@ -50,6 +51,7 @@
         &__logo {
             height: 28px;
             width: 30px;
+            min-width: 30px;
         }
 
         &__content {
@@ -62,6 +64,7 @@
     .contact {
         &__logo {
             width: 22px;
+            min-width: 22px;
         }
 
         &__content {
@@ -74,6 +77,7 @@
     .contact {
         &__logo {
             width: 20px;
+            min-width: 20px;
         }
 
         &__content {

@@ -10,6 +10,7 @@ const $header = '.header';
 
 let headerHeight = '';
 let promiseHeaderHeight = '';
+let promiseHeaderHeightResize = '';
 
 
 function setHeaderHeight ($header, headerHeight) {
@@ -23,8 +24,8 @@ $(window).on('load', function () {
     promiseHeaderHeight = setHeaderHeight ($header, headerHeight);
 
     $(window).resize(function () {
-        promiseHeaderHeight = setHeaderHeight ($header, headerHeight);
+        promiseHeaderHeightResize = setHeaderHeight ($header, headerHeight);
     });
 });
 
-export {promiseHeaderHeight};
+export {promiseHeaderHeight, promiseHeaderHeightResize};

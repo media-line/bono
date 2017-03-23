@@ -2,5 +2,5 @@
 
 import './page-inner.scss';
 
-import './../breadcrumbs/breadcrumbs.js';
-import './../two-column-grid/two-column-grid.js';
+import './../two-column-grid/two-column-grid';
+import './../container-height/container-height';

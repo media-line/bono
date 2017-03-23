@@ -1,7 +1,7 @@
 "use strict";
 
 import './sass/common.scss';
-import './portfolio.html';
+import './personal-detail.html';
 
 import './modules/header/header';
 import './modules/footer/footer';

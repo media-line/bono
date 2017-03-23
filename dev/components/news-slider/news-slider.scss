@@ -87,7 +87,7 @@
     }
 
     &__single-news {
-        height: auto;
+        height: auto !important;
         border-left: 1px solid $gray;
         position: relative;
         left: -20px;

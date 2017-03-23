@@ -3,7 +3,7 @@
 import './slider.scss';
 import slick from 'slick-carousel';
 import 'slick-carousel/slick/slick.css';
-import {promiseHeaderHeight} from './../../modules/header/header';
+import {promiseHeaderHeight, promiseHeaderHeightResize} from './../../modules/header/header';
 
 const $slider = '.slider';
 const $slide = '.slider__slide';
@@ -30,6 +30,8 @@ $(document).ready(function () {
         slidesToShow: 1,
     });
 
+    $($slider).slick('reinit');
+
     $($dot).click(function () {
         setSlide ($(this).index());
         setActiveDot ($(this).index());
@@ -50,7 +52,7 @@ $(window).on('load', function () {
     );
 
     $(window).resize(function () {
-        promiseHeaderHeight.then(
+        promiseHeaderHeightResize.then(
             result => {
                 $($slide).height($(window).outerHeight() - result);
                 $($dots).height($(window).outerHeight() - result);

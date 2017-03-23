@@ -20,7 +20,9 @@ module.exports = {
         listPortfolio: __dirname + '/dev/components/list-portfolio/list-portfolio',
         pagination: __dirname + '/dev/components/pagination/pagination',
         detailContact: __dirname + '/dev/components/detail-contact/detail-contact',
-        listPersonal: __dirname + '/dev/list-personal',
+        listPersonal: __dirname + '/dev/components/list-personal/list-personal',
+        detailPersonal: __dirname + '/dev/components/detail-personal/detail-personal',
+        breadcrumbs: __dirname + '/dev/components/breadcrumbs/breadcrumbs',
         
         mainpage: __dirname + '/dev/mainpage',
         delivery: __dirname + '/dev/delivery',
@@ -35,6 +37,9 @@ module.exports = {
         lease: __dirname + '/dev/lease',
         contactsPage: __dirname + '/dev/contacts-page',
         personalList: __dirname + '/dev/personal-list',
+        personalDetail: __dirname + '/dev/personal-detail',
+        
+        pageInner: __dirname + '/dev/modules/page-inner/page-inner',
     }, 
     output: {
         path: __dirname + '/public',
