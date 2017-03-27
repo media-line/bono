@@ -30,6 +30,13 @@
 
     &__text {
         padding-bottom: 20px;
+
+        a {
+            @include link-decoration ($black, 3px, 0px, 0.2s);
+            color: $black;
+            text-decoration: none;
+            font-weight: bold;
+        }
     }
 }
 

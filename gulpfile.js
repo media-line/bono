@@ -4,14 +4,14 @@ var rename = require("gulp-rename");
 var path = {
                 detailContact: 'news.detail/contacts',
                 detailNews: 'news/news/bitrix/news.detail/.default',
-                detailPersonal: 'news.detail/personal',
+                detailPersonal: 'news/personal/bitrix/news.detail/.default',
                 listClients: 'news.list/clients',
                 listNews: 'news/news/bitrix/news.list/.default',
-                listPersonal: 'news.list/personal',
+                listPersonal: 'news/personal/bitrix/news.list/.default',
                 listPortfolio: 'news.list/portfolio',
                 listProducts: 'news.list/products',
                 newsSlider: 'news.list/slider-news',
-                pagination: 'pagination/bono',
+                pagination: 'system.pagenavigation/.default',
                 search: 'search.form/bono',
                 serviceDetail: 'news.detail/service',
                 services: 'news.list/services',
@@ -47,15 +47,15 @@ gulp.task('compile', function() {
         
     gulp.src('public/js/mainpage.js')
         .pipe(rename('mainpage.js'))
-        .pipe(gulp.dest('public/ml-bono/'));
+        .pipe(gulp.dest('public/ml-bono/js/'));
         
     gulp.src('public/js/pageInner.js')
         .pipe(rename('pageinner.js'))
-        .pipe(gulp.dest('public/ml-bono/'));
+        .pipe(gulp.dest('public/ml-bono/js/'));
         
     gulp.src('public/js/common.js')
         .pipe(rename('common.js'))
-        .pipe(gulp.dest('public/ml-bono/'));
+        .pipe(gulp.dest('public/ml-bono/js/'));
     return true;
 });
 
