@@ -18,6 +18,7 @@ module.exports = {
         listNews: __dirname + '/dev/components/list-news/list-news',
         detailNews: __dirname + '/dev/components/detail-news/detail-news',
         listPortfolio: __dirname + '/dev/components/list-portfolio/list-portfolio',
+        detailPortfolio: __dirname + '/dev/components/detail-portfolio/detail-portfolio',
         pagination: __dirname + '/dev/components/pagination/pagination',
         detailContact: __dirname + '/dev/components/detail-contact/detail-contact',
         listPersonal: __dirname + '/dev/components/list-personal/list-personal',
@@ -38,6 +39,7 @@ module.exports = {
         contactsPage: __dirname + '/dev/contacts-page',
         personalList: __dirname + '/dev/personal-list',
         personalDetail: __dirname + '/dev/personal-detail',
+        portfolioDetail: __dirname + '/dev/portfolio-detail',
         
         pageInner: __dirname + '/dev/modules/page-inner/page-inner',
     }, 
@@ -125,8 +127,15 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
+            "window.jQuery": "jquery"
         }),
     ],
+    
+    resolve: {
+        alias: {
+            'jquery': require.resolve('jquery'),
+        },
+    },
     
     devServer: {
         host: 'localhost',

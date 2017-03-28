@@ -12,6 +12,8 @@ let headerHeight = '';
 let promiseHeaderHeight = '';
 let promiseHeaderHeightResize = '';
 
+let resizeTimer;
+
 
 function setHeaderHeight ($header, headerHeight) {
     return new Promise((resolve) => {
@@ -23,8 +25,12 @@ function setHeaderHeight ($header, headerHeight) {
 $(window).on('load', function () {
     promiseHeaderHeight = setHeaderHeight ($header, headerHeight);
 
-    $(window).resize(function () {
-        promiseHeaderHeightResize = setHeaderHeight ($header, headerHeight);
+    $(window).resize(function (e) {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(function() {
+            promiseHeaderHeightResize = setHeaderHeight ($header, headerHeight);
+        }, 250);
     });
 });
 

@@ -11,6 +11,9 @@ const $dots = '.slider__dots';
 const $dot = '.slider__dot';
 const dotActive = 'slider__dot_active';
 
+
+let resizeTimer;
+
 function setSlide (active) {
     $($slider).slick('slickGoTo', active);
 }
@@ -51,13 +54,17 @@ $(window).on('load', function () {
         }
     );
 
-    $(window).resize(function () {
-        promiseHeaderHeightResize.then(
-            result => {
-                $($slide).height($(window).outerHeight() - result);
-                $($dots).height($(window).outerHeight() - result);
-                $($slider).slick('reinit');
-            }
-        );
+    $(window).resize(function (e) {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(function() {
+            promiseHeaderHeightResize.then(
+                result => {
+                    $($slide).height($(window).outerHeight() - result);
+                    $($dots).height($(window).outerHeight() - result);
+                    $($slider).slick('reinit');
+                }
+            );
+        }, 250);
     });
 });

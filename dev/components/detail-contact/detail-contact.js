@@ -27,7 +27,7 @@ $(document).ready(function() {
                 balloonContent: '220980 г.Минск ул. Машиностроителей 30 офис 564'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: 'images/marker.png',
+                iconImageHref: '/images/marker.png',
                 iconImageSize: [40, 60],
                 iconImageOffset: [-20, -60]
             });

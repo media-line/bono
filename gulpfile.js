@@ -8,7 +8,8 @@ var path = {
                 listClients: 'news.list/clients',
                 listNews: 'news/news/bitrix/news.list/.default',
                 listPersonal: 'news/personal/bitrix/news.list/.default',
-                listPortfolio: 'news.list/portfolio',
+                detailPortfolio: 'photogallery/portfolio/bitrix/photogallery.detail.list.ex/.default',
+                listPortfolio: 'photogallery/portfolio/bitrix/photogallery.section.list/.default',
                 listProducts: 'news.list/products',
                 newsSlider: 'news.list/slider-news',
                 pagination: 'system.pagenavigation/.default',
@@ -19,16 +20,23 @@ var path = {
                 topMenu: 'menu/top-menu',
                 breadcrumbs: 'breadcrumb/bono',
             }
+            
+var pathExcludeJS = ['listPortfolio', 'detailPortfolio'];
+var pathExcludeCSS = [];
 
 gulp.task('compile', function() {
     for (var name in path) {
-        gulp.src('public/js/'+name+'.js')
-        .pipe(rename('script.js'))
-        .pipe(gulp.dest('public/ml-bono/components/bitrix/'+path[name]));
+        if (pathExcludeJS.indexOf(name) == -1) {
+            gulp.src('public/js/'+name+'.js')
+            .pipe(rename('script.js'))
+            .pipe(gulp.dest('public/ml-bono/components/bitrix/'+path[name]));
+        }
         
-        gulp.src('public/css/'+name+'.css')
-        .pipe(rename('style.css'))
-        .pipe(gulp.dest('public/ml-bono/components/bitrix/'+path[name]));
+        if (pathExcludeCSS.indexOf(name) == -1) {
+            gulp.src('public/css/'+name+'.css')
+            .pipe(rename('style.css'))
+            .pipe(gulp.dest('public/ml-bono/components/bitrix/'+path[name]));
+        }
     }
     
     gulp.src('public/css/mainpage.css')
