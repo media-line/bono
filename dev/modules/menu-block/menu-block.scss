@@ -5,7 +5,7 @@
     text-align: left;
 
     p {
-        padding-bottom: 0;
+        padding-bottom: 0 !important;
     }
 
     &__row {
@@ -18,8 +18,8 @@
 
         img {
             width: 100%;
-            border: none;
-            margin-right: 0;
+            border: none !important;
+            margin-right: 0 !important;
         }
     }
 
@@ -49,6 +49,7 @@
 
         li {
             padding: 5px 0;
+            font-weight: 400;
 
             &:before {
                 content: '';

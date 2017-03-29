@@ -22,6 +22,10 @@
                     opacity: 1;
                     visibility: visible;
                 }
+
+                &_disable {
+                    color: $black;
+                }
             }
         }
 
@@ -164,6 +168,7 @@
         border-radius: 3px;
         border: 1px solid transparent;
         transition: 0.2s;
+        box-sizing: border-box;
 
         &:hover {
             border: 1px solid $red;
@@ -225,6 +230,32 @@
             width: 100%;
             display: block;
             text-align: center;
+
+            &_parent {
+                &:hover {
+                    .top-menu__link {
+                        box-shadow: none;
+                        background-color: $white;
+                        color: $black;
+
+                        &:before {
+                            border: 3px solid transparent;
+                        }
+
+                        &:after {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+
+            &_active {
+                .top-menu__link {
+                    background-color: $red !important;
+                    color: $white !important;
+                }
+            }
         }
 
         &__link {
@@ -242,10 +273,13 @@
         }
 
         &__inner {
-            position: relative;
-            width: 100%;
+            position: static;
+            width: auto;
             box-sizing: border-box;
             display: none;
+            margin: 0 7px;
+            visibility: visible;
+            opacity: 1;
         }
     }
 }

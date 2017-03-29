@@ -39,6 +39,12 @@ gulp.task('compile', function() {
         }
     }
     
+    
+    gulp.src('public/js/detailPortfolio.js')
+        .pipe(rename('detailPortfolio.js'))
+        .pipe(gulp.dest('public/ml-bono/components/bitrix/photogallery/portfolio/bitrix/photogallery.detail.list.ex/.default'));
+    
+    
     gulp.src('public/css/mainpage.css')
         .pipe(rename('mainpage.css'))
         .pipe(gulp.dest('public/ml-bono/'));
