@@ -26,7 +26,7 @@
 
     &__highlight {
         &_red {
-            color: $red;
+            color: $red !important;
         }
     }
 
@@ -37,11 +37,15 @@
 
     a {
         text-decoration: none;
-        color: $black;
+        color: $black !important;
         transition: 0.2s;
 
         &:hover {
-            color: $red;
+            color: $red !important;
+        }
+
+        &:after {
+            content: none !important;
         }
     }
 }

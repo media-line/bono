@@ -22,6 +22,14 @@
             height: 150px;
         }
     }
+
+    &_one-row {
+        border-top: none;
+
+        .list-portfolio__img-block {
+            border-top: 1px solid $gray;
+        }
+    }
 }
 
 @media (max-width: $tablet-width-point) {

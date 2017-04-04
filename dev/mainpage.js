@@ -5,6 +5,7 @@ import './index.html';
 
 import './modules/header/header';
 import './modules/mainpage-grid/mainpage-grid';
+import './modules/modal/modal';
 import './modules/footer/footer';
 
 import './images/logo.jpg';

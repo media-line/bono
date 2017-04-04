@@ -1,0 +1,33 @@
+.quantity {
+    &__button {
+        padding: 8px 9px;
+        border: 1px solid $black;
+        border-radius: 2px;
+        display: inline-block;
+        cursor: pointer;
+        background-color: $white;
+        transition: 0.2s;
+        outline: none;
+
+        & + .quantity__button {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: $red;
+            color: $white;
+            border: 1px solid $red;
+        }
+
+        &_active {
+            color: $red;
+            border: 1px solid $red;
+
+            &:hover {
+                color: $red;
+                border: 1px solid $red;
+                background-color: $white;
+            }
+        }
+    }
+}

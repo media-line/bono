@@ -1,7 +1,7 @@
 .personal-item {
     display: flex;
     text-decoration: none;
-    color: $black;
+    color: $black !important;
 
     &:hover {
         .personal-item__job {
@@ -78,6 +78,10 @@
             transform: scale(0);
             transition: 0.2s;
         }
+    }
+
+    &:after {
+        content: none !important;
     }
 }
 

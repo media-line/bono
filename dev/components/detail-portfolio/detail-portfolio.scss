@@ -26,6 +26,14 @@
     &__cover {
         margin-bottom: 0 !important;
     }
+
+    &_one-row {
+        border-top: none;
+
+        .detail-portfolio__img-block {
+            border-top: 1px solid $gray;
+        }
+    }
 }
 
 @media (max-width: $tablet-width-point) {

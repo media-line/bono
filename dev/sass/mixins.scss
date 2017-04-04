@@ -47,7 +47,7 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: $bottom;
+        bottom: $bottom !important;
         border-bottom: $height solid $color;
         transform: scale(1);
         transition: $transition;

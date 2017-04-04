@@ -1,6 +1,6 @@
 .img-block {
     text-decoration: none;
-    color: $black;
+    color: $black !important;
 
     &__cover {
         border: 1px solid $gray;
@@ -53,6 +53,10 @@
         .img-block__hover {
             opacity: 0.2;
         }
+    }
+
+    &:after {
+        content: none !important;
     }
 }
 

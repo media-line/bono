@@ -1,0 +1,17 @@
+.employee-item {
+    display: table-row;
+
+    &__cell {
+        display: table-cell;
+        padding: 20px 15px;
+        border-bottom: 1px solid $gray;
+
+        & + .employee-item__cell {
+            border-left: 1px solid $gray;
+        }
+
+        &_phone {
+            min-width: 140px;
+        }
+    }
+}

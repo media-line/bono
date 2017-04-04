@@ -14,7 +14,7 @@
 
         &:hover {
             .top-menu__link {
-                &:before {
+                .top-menu__tip {
                     border: 3px solid $red;
                 }
 
@@ -31,7 +31,7 @@
 
         &:hover + .top-menu__element {
             .top-menu__link {
-                &:before {
+                .top-menu__tip {
                     border: 3px solid $red;
                 }
             }
@@ -59,7 +59,7 @@
                 .top-menu__link {
                     box-shadow: 0 3px 8px $gray-dark;
 
-                    &:before {
+                    .top-menu__tip {
                         border: 3px solid $black;
                     }
 
@@ -71,10 +71,21 @@
 
                 & + .top-menu__element {
                     .top-menu__link {
-                        &:before {
+                        .top-menu__tip {
                             border: 3px solid $black;
                         }
                     }
+                }
+            }
+        }
+
+        &_parent-second {
+            position: relative;
+
+            &:hover {
+                .top-menu__inner-second {
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }
@@ -88,16 +99,16 @@
         transition: 0.2s;
         z-index: 1;
         position: relative;
+    }
 
-        &:before {
-            content: '';
-            position: absolute;
-            top: 27px;
-            left: -17px;
-            border-radius: 100%;
-            border: 3px solid $black;
-            transition: 0.2s;
-        }
+    &__tip {
+        content: '';
+        position: absolute;
+        top: 27px;
+        left: -37px;
+        border-radius: 100%;
+        border: 3px solid $black;
+        transition: 0.2s;
     }
 
     &__line {
@@ -175,6 +186,19 @@
             color: $red;
         }
     }
+
+    &__inner-second {
+        position: absolute;
+        top: -10px;
+        left: 100%;
+        width: 250px;
+        background-color: white;
+        padding: 10px 7px;
+        transition: 0.2s;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 0 15px $gray-dark;
+    }
 }
 
 @media (max-width: $small-device-width-point) {
@@ -184,10 +208,14 @@
         &__link {
             padding: 20px 10px;
 
-            &:before {
+            .top-menu__tip {
                 top: 25px;
                 left: -10px;
             }
+        }
+
+        &__tip {
+            display: none;
         }
     }
 }
@@ -211,9 +239,17 @@
             align-items: center;
             padding: 20px 8px;
 
-            &:before {
+            .top-menu__tip {
                 top: 33px;
             }
+        }
+
+        &__inner {
+            text-align: left;
+        }
+
+        &__inner-second {
+            display: none;
         }
     }
 }
@@ -224,6 +260,7 @@
 
         &__menu {
             display: none;
+            margin-left: 0;
         }
 
         &__element {
@@ -238,7 +275,7 @@
                         background-color: $white;
                         color: $black;
 
-                        &:before {
+                        .top-menu__tip {
                             border: 3px solid transparent;
                         }
 
@@ -261,8 +298,10 @@
         &__link {
             display: block;
             padding: 14px 0;
+            margin-left: 0;
+            margin-right: 0;
 
-            &:before {
+            .top-menu__tip {
                 content: none;
             }
 
@@ -280,6 +319,7 @@
             margin: 0 7px;
             visibility: visible;
             opacity: 1;
+            transition: none;
         }
     }
 }

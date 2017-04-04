@@ -23,13 +23,17 @@
     &__wrapper {
         display: block;
         text-decoration: none;
-        color: $black;
+        color: $black !important;
         padding: 15px;
         transition: 0.2s;
         outline: none;
 
         &:hover {
             background-color: $gray-light;
+        }
+
+        &:after {
+            content: none !important;
         }
     }
 }

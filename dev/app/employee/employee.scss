@@ -1,0 +1,21 @@
+.employee {
+    &__header {
+        display: flex;
+        padding-bottom: 20px;
+    }
+
+    &__quantity {
+        font-weight: 400;
+        min-width: 50%;
+    }
+
+    &__quantity-block {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 15px;
+    }
+
+    &__search {
+        min-width: 50%;
+    }
+}

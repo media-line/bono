@@ -9,47 +9,46 @@ module.exports = {
     entry: {
         search: __dirname + '/dev/components/search/search',
         topMenu: __dirname + '/dev/components/top-menu/top-menu',
-        slider: __dirname + '/dev/components/slider/slider',
-        services: __dirname + '/dev/components/services/services',
-        newsSlider: __dirname + '/dev/components/news-slider/news-slider',
-        serviceDetail: __dirname + '/dev/components/service-detail/service-detail',
-        listProducts: __dirname + '/dev/components/list-products/list-products',
-        listClients: __dirname + '/dev/components/list-clients/list-clients',
-        listNews: __dirname + '/dev/components/list-news/list-news',
-        detailNews: __dirname + '/dev/components/detail-news/detail-news',
-        listPortfolio: __dirname + '/dev/components/list-portfolio/list-portfolio',
-        detailPortfolio: __dirname + '/dev/components/detail-portfolio/detail-portfolio',
+        //slider: __dirname + '/dev/components/slider/slider',
+        //services: __dirname + '/dev/components/services/services',
+        //newsSlider: __dirname + '/dev/components/news-slider/news-slider',
+        //serviceDetail: __dirname + '/dev/components/service-detail/service-detail',
+        //listProducts: __dirname + '/dev/components/list-products/list-products',
+        //listClients: __dirname + '/dev/components/list-clients/list-clients',
+        //listNews: __dirname + '/dev/components/list-news/list-news',
+        //detailNews: __dirname + '/dev/components/detail-news/detail-news',
+        //listPortfolio: __dirname + '/dev/components/list-portfolio/list-portfolio',
+        //detailPortfolio: __dirname + '/dev/components/detail-portfolio/detail-portfolio',
         pagination: __dirname + '/dev/components/pagination/pagination',
-        detailContact: __dirname + '/dev/components/detail-contact/detail-contact',
-        listPersonal: __dirname + '/dev/components/list-personal/list-personal',
-        detailPersonal: __dirname + '/dev/components/detail-personal/detail-personal',
+        //detailContact: __dirname + '/dev/components/detail-contact/detail-contact',
+        //listPersonal: __dirname + '/dev/components/list-personal/list-personal',
+        //detailPersonal: __dirname + '/dev/components/detail-personal/detail-personal',
         breadcrumbs: __dirname + '/dev/components/breadcrumbs/breadcrumbs',
-        //employee: __dirname + '/dev/components/employee/employee',
         
-        mainpage: __dirname + '/dev/mainpage',
-        delivery: __dirname + '/dev/delivery',
-        catering: __dirname + '/dev/catering',
-        leaseCategory: __dirname + '/dev/lease-category',
-        cafeService: __dirname + '/dev/cafe-service',
-        clients: __dirname + '/dev/clients',
-        news: __dirname + '/dev/news',
-        newsDetail: __dirname + '/dev/news-detail',
-        portfolio: __dirname + '/dev/portfolio',
-        text: __dirname + '/dev/text',
-        lease: __dirname + '/dev/lease',
-        contactsPage: __dirname + '/dev/contacts-page',
-        personalList: __dirname + '/dev/personal-list',
-        personalDetail: __dirname + '/dev/personal-detail',
-        portfolioDetail: __dirname + '/dev/portfolio-detail',
-        //personal: __dirname + '/dev/personal',
+        
+        //mainpage: __dirname + '/dev/mainpage',
+        //delivery: __dirname + '/dev/delivery',
+        //catering: __dirname + '/dev/catering',
+        //leaseCategory: __dirname + '/dev/lease-category',
+        //cafeService: __dirname + '/dev/cafe-service',
+        //clients: __dirname + '/dev/clients',
+        //news: __dirname + '/dev/news',
+        //newsDetail: __dirname + '/dev/news-detail',
+        //portfolio: __dirname + '/dev/portfolio',
+        //text: __dirname + '/dev/text',
+        //lease: __dirname + '/dev/lease',
+        //contactsPage: __dirname + '/dev/contacts-page',
+        //personalList: __dirname + '/dev/personal-list',
+        //personalDetail: __dirname + '/dev/personal-detail',
+        //portfolioDetail: __dirname + '/dev/portfolio-detail',
+        personal: __dirname + '/dev/personal',
         
         pageInner: __dirname + '/dev/modules/page-inner/page-inner',
     }, 
     output: {
         path: __dirname + '/public',
         publicPath: NODE_ENV == 'development' ? '/' : '',
-        filename: 'js/[name].js',
-        library: 'libraryBono'
+        filename: 'js/[name].js'
     },
     
     watch: NODE_ENV == 'development',
@@ -63,7 +62,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015']
+                    presets: ['es2015', 'react']
                 }
             },
             {
@@ -113,10 +112,10 @@ module.exports = {
     
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(),
-        new webpack.optimize.CommonsChunkPlugin({
+        /*new webpack.optimize.CommonsChunkPlugin({
             name: 'common',
             minChunks: 2,
-        }),
+        }),*/
         /*new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
@@ -144,5 +143,5 @@ module.exports = {
         host: 'localhost',
         port: 8080,
         contentBase: __dirname + '/dev'
-    }
+    },
 };

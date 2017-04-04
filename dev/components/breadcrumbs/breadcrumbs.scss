@@ -5,9 +5,10 @@
     &__link {
         color: $black-light;
         text-decoration: none;
-        @include link-decoration-inverse ($black-light, 1px, 0px, 0.2s);
+        @include link-decoration-inverse ($black-light, 1px, -1px, 0.2s);
         margin-right: 23px;
         position: relative;
+        display: inline-block;
 
         &:before {
             @include icomoon;

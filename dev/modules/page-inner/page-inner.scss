@@ -8,10 +8,11 @@
 
     &__title {
         text-align: center;
-        font-size: 60px;
+        font-size: 48px;
         font-weight: 700;
         color: $red;
         padding-bottom: 40px;
+        @include container;
     }
 
     &__breadcrumbs-block {
@@ -130,6 +131,12 @@
                 }
             }
         }
+    }
+
+    a {
+        color: $red;
+        text-decoration: none;
+        @include link-decoration-inverse ($red, 1px, 1px, 0.2s);
     }
 }
 

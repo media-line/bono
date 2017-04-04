@@ -12,19 +12,19 @@ const mapContainer = 'detail-contact__map';
 let map;
 let placemark;
 
-$(document).ready(function() {
+let mapInit = function (mapx, mapy, content) {
     scriptjs('https://api-maps.yandex.ru/2.1/?lang=ru_RU', function () {
         ymaps.ready(init);
 
         function init() {
             map = new ymaps.Map(mapContainer, {
-                center: [30, 30],
-                zoom: 9,
+                center: [mapx, mapy],
+                zoom: 13,
                 controls: ['zoomControl', 'typeSelector',  'fullscreenControl']
             });
 
-            placemark = new ymaps.Placemark([30, 30], {
-                balloonContent: '220980 г.Минск ул. Машиностроителей 30 офис 564'
+            placemark = new ymaps.Placemark([mapx, mapy], {
+                balloonContent: content
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: '/images/marker.png',
@@ -37,4 +37,10 @@ $(document).ready(function() {
             map.behaviors.disable('scrollZoom');
         }
     });
-});
+}
+
+export {mapInit};
+
+/*$(document).ready(function() {
+    let init = new mapInit(50, 50, '220980 г.Минск ул. Машиностроителей 30 офис 564');
+});*/

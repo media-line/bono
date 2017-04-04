@@ -1,0 +1,54 @@
+.head-cell {
+    display: table-cell;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    padding: 20px 15px;
+    font-weight: 400;
+    cursor: pointer;
+
+    & + .head-cell {
+        border-left: 1px solid $gray;
+    }
+
+    &__wrapper {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 11px;
+            right: -15px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid $black;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 4px;
+            right: -15px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 5px solid $black;
+        }
+    }
+
+    &_active-asc {
+        .head-cell__wrapper {
+            &:before {
+                border-top: 5px solid $red;
+            }
+        }
+    }
+
+    &_active-desc {
+        .head-cell__wrapper {
+            &:after {
+                border-bottom: 5px solid $red;
+            }
+        }
+    }
+}

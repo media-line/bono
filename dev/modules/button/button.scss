@@ -16,12 +16,16 @@
     }
 
     &_red {
-        color: $white;
+        color: $white !important;
         background-color: $red;
 
         &:hover {
-            color: $red;
+            color: $red !important;
             background-color: $white;
         }
+    }
+
+    &:after {
+        content: none !important;
     }
 }
