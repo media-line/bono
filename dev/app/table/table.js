@@ -35,7 +35,7 @@ class Table extends React.Component {
         } else {
             if (this.props.currentPageEmployees.length > 0) {
                 employeesList = this.props.currentPageEmployees.map((employee) =>
-                    <EmployeeItem key={employee.id} fio={employee.fio} job={employee.job} phone={employee.realPhone} phone={employee.phone} email={employee.email} organization={employee.organization} functional={employee.functional} />
+                    <EmployeeItem key={employee.id} fio={employee.fio} job={employee.job} realPhone={employee.realPhone} phone={employee.phone} email={employee.email} organization={employee.organization} functional={employee.functional} />
                 );
             } else {
                 employeesList = <div key="0" className="table__empty">По данному запросу ничего не найдено</div>;

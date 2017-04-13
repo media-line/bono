@@ -43,6 +43,10 @@
 
     &__contact {
         text-align: right;
+
+        &_first {
+            padding-right: 0;
+        }
     }
 
     &__top-menu-block {

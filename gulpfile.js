@@ -19,6 +19,7 @@ var path = {
                 slider: 'news.list/slider',
                 topMenu: 'menu/top-menu',
                 breadcrumbs: 'breadcrumb/bono',
+                detailEvent: 'news.detail/event',
             }
             
 var pathExcludeJS = ['listPortfolio', 'detailPortfolio'];

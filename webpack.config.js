@@ -24,6 +24,7 @@ module.exports = {
         listPersonal: __dirname + '/dev/components/list-personal/list-personal',
         detailPersonal: __dirname + '/dev/components/detail-personal/detail-personal',
         breadcrumbs: __dirname + '/dev/components/breadcrumbs/breadcrumbs',
+        detailEvent: __dirname + '/dev/components/detail-event/detail-event',
         //employee: __dirname + '/dev/components/employee/employee',
         
         mainpage: __dirname + '/dev/mainpage',

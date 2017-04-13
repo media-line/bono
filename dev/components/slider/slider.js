@@ -50,7 +50,7 @@ $(window).on('load', function () {
         result => {
             $($slide).height($(window).outerHeight() - result);
             $($dots).height($(window).outerHeight() - result);
-            $($slider).slick('reinit');
+            //$($slider).slick('reinit');
         }
     );
 
@@ -62,7 +62,7 @@ $(window).on('load', function () {
                 result => {
                     $($slide).height($(window).outerHeight() - result);
                     $($dots).height($(window).outerHeight() - result);
-                    $($slider).slick('reinit');
+                    //$($slider).slick('reinit');
                 }
             );
         }, 250);

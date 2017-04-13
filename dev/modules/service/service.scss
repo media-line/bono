@@ -26,6 +26,20 @@
         }
     }
 
+    &__title-link {
+        color: $red;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+            color: $black;
+        }
+
+        &:after {
+            content: none !important;
+        }
+    }
+
     &__description {
         font-size: 16px;
         font-weight: 300;
