@@ -29,47 +29,47 @@ gulp.task('compile', function() {
     for (var name in path) {
         if (pathExcludeJS.indexOf(name) == -1) {
             gulp.src('public/js/'+name+'.js')
-            .pipe(rename('script.js'))
+            .pipe(rename('script.min.js'))
             .pipe(gulp.dest('public/ml-bono/components/bitrix/'+path[name]));
         }
         
         if (pathExcludeCSS.indexOf(name) == -1) {
             gulp.src('public/css/'+name+'.css')
-            .pipe(rename('style.css'))
+            .pipe(rename('style.min.css'))
             .pipe(gulp.dest('public/ml-bono/components/bitrix/'+path[name]));
         }
     }
     
     
     gulp.src('public/js/detailPortfolio.js')
-        .pipe(rename('detailPortfolio.js'))
+        .pipe(rename('detailPortfolio.min.js'))
         .pipe(gulp.dest('public/ml-bono/components/bitrix/photogallery/portfolio/bitrix/photogallery.detail.list.ex/.default'));
     
     
     gulp.src('public/css/mainpage.css')
-        .pipe(rename('mainpage.css'))
+        .pipe(rename('mainpage.min.css'))
         .pipe(gulp.dest('public/ml-bono/'));
         
     gulp.src('public/css/pageInner.css')
-        .pipe(rename('pageinner.css'))
+        .pipe(rename('pageinner.min.css'))
         .pipe(gulp.dest('public/ml-bono/'));
         
     gulp.src('public/css/common.css')
-        .pipe(rename('common.css'))
+        .pipe(rename('common.min.css'))
         .pipe(gulp.dest('public/ml-bono/'));
         
         
         
     gulp.src('public/js/mainpage.js')
-        .pipe(rename('mainpage.js'))
+        .pipe(rename('mainpage.min.js'))
         .pipe(gulp.dest('public/ml-bono/js/'));
         
     gulp.src('public/js/pageInner.js')
-        .pipe(rename('pageinner.js'))
+        .pipe(rename('pageinner.min.js'))
         .pipe(gulp.dest('public/ml-bono/js/'));
         
     gulp.src('public/js/common.js')
-        .pipe(rename('common.js'))
+        .pipe(rename('common.min.js'))
         .pipe(gulp.dest('public/ml-bono/js/'));
     return true;
 });

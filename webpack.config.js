@@ -75,7 +75,7 @@ module.exports = {
                         {
                             loader: 'css-loader',
                             options: {
-                                //minimize: true
+                                minimize: true
                             }
                         }, 
                         "postcss-loader", 
@@ -118,7 +118,7 @@ module.exports = {
             name: 'common',
             minChunks: 2,
         }),
-        /*new webpack.optimize.UglifyJsPlugin({
+        new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
             },
@@ -126,7 +126,7 @@ module.exports = {
                 comments: false,
             },
             sourceMap: true,
-        }),*/
+        }),
         new ExtractTextPlugin({filename: "css/[name].css", allChunks: true, disable: NODE_ENV == 'development'}),
         new webpack.ProvidePlugin({
             $: "jquery",
